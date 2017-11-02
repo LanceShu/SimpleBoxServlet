@@ -20,7 +20,7 @@ public class ImageUrl extends javax.servlet.http.HttpServlet {
 
         long id = System.currentTimeMillis();
         ServletInputStream sis = request.getInputStream();
-        String pathUrl = "C:/apache-tomcat-8.5.23/webapps/SimpleBox";
+        String pathUrl = "/home/lanceshu/Tomcat/apache-tomcat-8.5.23/webapps/SimpleBox";
         String imageUrl = "/picture/" + id + ".jpg";
         OutputStream os = new FileOutputStream(pathUrl + imageUrl);
         BufferedOutputStream bos = new BufferedOutputStream(os);
@@ -37,7 +37,7 @@ public class ImageUrl extends javax.servlet.http.HttpServlet {
         File file = new File(pathUrl + imageUrl);
         if(file.exists()){
             pw.println("success");
-            pw.println("http://192.168.56.1:8080/SimpleBox" + imageUrl);
+            pw.println("http://123.207.145.251:8080/SimpleBox" + imageUrl);
         }else{
             pw.println("failure");
         }
