@@ -20,8 +20,11 @@ public class ImageUrl extends javax.servlet.http.HttpServlet {
 
         long id = System.currentTimeMillis();
         ServletInputStream sis = request.getInputStream();
+
+        //将图片上传到服务器的某个文件夹下;
         String pathUrl = "/home/lanceshu/Tomcat/apache-tomcat-8.5.23/webapps/SimpleBox";
         String imageUrl = "/picture/" + id + ".jpg";
+
         OutputStream os = new FileOutputStream(pathUrl + imageUrl);
         BufferedOutputStream bos = new BufferedOutputStream(os);
 
